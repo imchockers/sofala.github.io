@@ -1,0 +1,119 @@
+html {
+    color: white;
+    font-size: 1em;
+    line-height: 1.4;
+	background-color: black;
+	font-family: Perpetua;
+	font-family: 'Amiri', serif;
+	font-weight: lighter;
+}
+
+h1, h2, p {
+	font-weight: lighter;
+}
+
+p {
+	line-height: 1;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+	font-weight: 100;
+}
+
+#title {
+	float: left;
+	font-size: 50px;
+}
+
+#subtitle {
+	clear: left;
+	float: left;
+	font-size: 30px;
+}
+
+#title, #subtitle {
+	text-align: center;
+	width: 100%;
+}
+
+#cornerimg {
+	position: absolute;
+	top: 20px;
+	right: 40px;
+	width: 200px;
+	height: 200px; 
+}
+
+a:visited {
+	color: white;
+}
+
+a {
+	overflow: auto;
+	text-decoration: none;
+}
+
+.navbar {
+	
+}
+
+header, .navbar, .contentcontainer {
+	width: 100%;
+	/*background-color: #404040;*/
+	width: 1000px;
+	margin: 0 auto;
+	overflow: auto;
+}
+
+.navbar, .vidcontainer {
+	border-bottom: 1px solid #989898;
+}
+
+.navlink {
+	float: left;
+	color: white;
+	padding: 5px 10px;
+}
+
+.contentcontainer {
+	
+}
+
+.vidcontainer {
+	overflow: auto;
+}
+
+.vid {
+	overflow: auto;
+	float: left;
+}
+
+iframe {
+	float: left;
+}
+
+.vidinfo {
+	float: right;
+	width: 35%;
+	overflow: auto;
+}
+
+.vidinfo > * {
+	padding-right: 20px;
+	text-align: right;
+}
+
+.vidinfo > p {
+	clear: both;
+	padding-left: 20px;
+	text-align: justify;
+}
+
+footer {
+	padding: 20px;
+	clear: both;
+	text-align: center;
+}
+
+footer p {
+	font-size: 12px;
+}
