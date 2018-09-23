@@ -116,6 +116,7 @@ header > * {
 }
 
 a {
+	color: black;
 	overflow: auto;
 	text-decoration: none;
 }
