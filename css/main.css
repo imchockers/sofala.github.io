@@ -236,7 +236,7 @@ footer p {
 		padding: 5px 10px;
 	}
 	
-	#navbutton:hover + .mobilenavbar {
+	#navbutton:hover + .mobilenavbar, #navbutton:focus + .mobilenavbar {
 		display: block;
 	}
 	
