@@ -1,9 +1,8 @@
 html {
-    color: white;
+    color: black;
     font-size: 1em;
     line-height: 1.4;
-	background-color: black;
-	font-family: Perpetua;
+	background-color: white;
 	font-family: 'Amiri', serif;
 	font-weight: lighter;
 }
@@ -19,32 +18,73 @@ p {
 	font-weight: 100;
 }
 
-#title {
-	float: left;
+header > h1 {
 	font-size: 50px;
 }
 
-#subtitle {
-	clear: left;
-	float: left;
+header > h2 {
 	font-size: 30px;
 }
 
-#title, #subtitle {
+header > * {
 	text-align: center;
-	width: 100%;
 }
 
-#cornerimg {
+#banner {
+	position: relative;
+	width: 800px;
+	height: 300px;
+	margin: 0 auto;
+}
+
+#bannerimg, #bannertext {
 	position: absolute;
-	top: 20px;
-	right: 40px;
-	width: 200px;
-	height: 200px; 
 }
 
-a:visited {
-	color: white;
+#bannerimg {
+	top: 0px;
+	left: 150px;
+	width: 500px;
+	opacity: 1;
+	transition: opacity 2s;
+	-moz-transition: opacity 2s;
+	-webkit-transition: opacity 2s;
+	height: auto;
+
+}
+
+#bannertext {
+	top: 85px;
+	left: 150px;
+	opacity: 0;
+	transition: opacity 2s;
+	-moz-transition: opacity 2s;
+	-webkit-transition: opacity 2s;
+}
+
+.titlefade {
+	font-size: 50px;
+	padding-left: 75px;
+}
+
+#so {
+	color: #cbb7d9;
+}
+
+#fa {
+	color: #fbb364;
+}
+
+#la {
+	color: #8dcfe5;
+}
+
+#banner:hover #bannerimg {
+	opacity: 0;
+}
+
+#banner:hover #bannertext {
+	opacity: 1;
 }
 
 a {
@@ -56,56 +96,55 @@ a {
 	
 }
 
-header, .navbar, .contentcontainer {
+.navbar, .contentcontainer {
+	clear: both;
 	width: 100%;
-	/*background-color: #404040;*/
-	width: 1000px;
+	background-color: white;
+	min-width: 400px;
+	max-width: 800px;
 	margin: 0 auto;
 	overflow: auto;
 }
 
-.navbar, .vidcontainer {
-	border-bottom: 1px solid #989898;
+.navbar {
+	border-bottom: 1px solid black;
 }
 
 .navlink {
 	float: left;
-	color: white;
+	color: black;
 	padding: 5px 10px;
+}
+
+.navlink:hover {
+	color: blue;
 }
 
 .contentcontainer {
 	
 }
 
-.vidcontainer {
-	overflow: auto;
-}
-
-.vid {
-	overflow: auto;
-	float: left;
-}
-
 iframe {
 	float: left;
 }
 
-.vidinfo {
-	float: right;
-	width: 35%;
-	overflow: auto;
+.videowrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
 }
 
-.vidinfo > * {
-	padding-right: 20px;
-	text-align: right;
+.videowrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
-.vidinfo > p {
-	clear: both;
-	padding-left: 20px;
-	text-align: justify;
+a:visited {
+	color: black;
 }
 
 footer {
