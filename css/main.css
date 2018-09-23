@@ -62,6 +62,10 @@ header > * {
 	-webkit-transition: opacity 2s;
 }
 
+#navbutton {
+	display: none;
+}
+
 .titlefade {
 	font-size: 50px;
 	padding-left: 75px;
@@ -79,6 +83,30 @@ header > * {
 	color: #8dcfe5;
 }
 
+#navbutton {
+	background: #cbb7d9;
+}
+
+#link1 {
+	background: #fbb364;
+}
+
+#link2 {
+	background: #8dcfe5;
+}
+
+#link3 {
+	background: #cbb7d9;
+}
+
+#link4 {
+	background: #fbb364;
+}
+
+#link5 {
+	background: #8dcfe5;
+}
+
 #banner:hover #bannerimg {
 	opacity: 0;
 }
@@ -94,6 +122,10 @@ a {
 
 .navbar {
 	
+}
+
+.mobilenavbar {
+	display: none;
 }
 
 .navbar, .contentcontainer {
@@ -157,7 +189,7 @@ footer p {
 	font-size: 12px;
 }
 
-@media only screen {
+@media only screen and (max-width: 800px) {
 	#banner {
 		width: 100%;
 		height: 120px;
@@ -178,6 +210,41 @@ footer p {
 		height: auto;
 	}
 	
+	.mobilenavbar {
+		overflow: auto;
+		border-top: 1px solid black;
+		border-left: 1px solid black;
+		border-right: 1px solid black;
+		display: block;
+	}
+	
+	.mobilenavbar a {
+		width: 100%;
+		overflow: auto;
+	}
+	
+	.navlink {
+		display: none;
+		transition: all 0.5s ease;
+		width: calc(100% - 20px);
+		border-bottom: 1px solid black;
+	}
+	
+	#navbutton {
+		display: block;
+		border: 1px solid black;
+		padding: 5px 10px;
+	}
+	
+	#navbutton:hover + .mobilenavbar a .navlink {
+		display: block;
+	}
+	
+	.navbar {
+		display: none;
+	}
+	
+	
 	.videowrapper {
 		width: 100%;
 	}
@@ -186,10 +253,10 @@ footer p {
 		width: 100%;
 	}
 	
-	.contentcontainer {
+	.contentcontainer, .navbar {
 		width: 100%;
 		margin: 0px;
-		
+		min-width: 100px;
 	}
 
 }
