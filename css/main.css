@@ -213,9 +213,6 @@ footer p {
 	.mobilenavbar {
 		display: none;
 		overflow: auto;
-		border-top: 1px solid black;
-		border-left: 1px solid black;
-		border-right: 1px solid black;
 	}
 	
 	.mobilenavbar a {
@@ -227,12 +224,10 @@ footer p {
 	.navlink {
 		transition: all 0.5s ease;
 		width: calc(100% - 20px);
-		border-bottom: 1px solid black;
 	}
 	
 	#navbutton {
 		display: block;
-		border: 1px solid black;
 		padding: 5px 10px;
 	}
 	
