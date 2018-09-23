@@ -156,3 +156,40 @@ footer {
 footer p {
 	font-size: 12px;
 }
+
+@media only screen and (max-width: 800px) {
+	#banner {
+		width: 100%;
+		height: 120px;
+	}
+	
+	#bannertext {
+		display: none;
+	}
+	
+	#bannerimg {
+		top: 0px;
+		left: calc(50% - 125px);
+		width: 250px;
+		opacity: 1;
+		transition: opacity 2s;
+		-moz-transition: opacity 2s;
+		-webkit-transition: opacity 2s;
+		height: auto;
+	}
+	
+	.videowrapper {
+		width: 100%;
+	}
+	
+	.videowrapper iframe {
+		width: 100%;
+	}
+	
+	.contentcontainer {
+		width: 100%;
+		margin: 0px;
+		
+	}
+
+}
