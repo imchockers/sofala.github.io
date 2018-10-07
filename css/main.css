@@ -1,10 +1,11 @@
 html {
-    color: black;
-    font-size: 1em;
+    color: white;
+    font-size: 1.2em;
     line-height: 1.4;
 	background-color: white;
-	font-family: 'Amiri', serif;
-	font-weight: lighter;
+	font-family: 'STIXGeneralBold';
+	font-weight: bold;
+	height: 100%;
 }
 
 h1, h2, p {
@@ -30,10 +31,26 @@ header > * {
 	text-align: center;
 }
 
+body {
+	margin: 0px;
+	height: 100%;
+	background-image: url("../img/bg.png");
+	background-position: left top;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+}
+
+#title {
+	color: white;
+	float: left;
+	font-size: 35px;
+	padding: 5px 20px;
+}
+
 #banner {
 	position: relative;
 	width: 800px;
-	height: 237.5px;
+	height: 300px;
 	margin: 0 auto;
 }
 
@@ -62,10 +79,6 @@ header > * {
 	-webkit-transition: opacity 2s;
 }
 
-#navbutton {
-	display: none;
-}
-
 .titlefade {
 	font-size: 50px;
 	padding-left: 75px;
@@ -83,30 +96,6 @@ header > * {
 	color: #8dcfe5;
 }
 
-#navbutton {
-	background: #cbb7d9;
-}
-
-#link1 {
-	background: #fbb364;
-}
-
-#link2 {
-	background: #8dcfe5;
-}
-
-#link3 {
-	background: #cbb7d9;
-}
-
-#link4 {
-	background: #fbb364;
-}
-
-#link5 {
-	background: #8dcfe5;
-}
-
 #banner:hover #bannerimg {
 	opacity: 0;
 }
@@ -116,45 +105,81 @@ header > * {
 }
 
 a {
-	color: black;
 	overflow: auto;
 	text-decoration: none;
 }
 
-.navbar {
-	
-}
-
-.mobilenavbar {
-	display: none;
-}
-
-.navbar, .contentcontainer {
-	clear: both;
-	width: 100%;
-	background-color: white;
-	min-width: 400px;
-	max-width: 800px;
+header {
 	margin: 0 auto;
 	overflow: auto;
 }
 
 .navbar {
-	border-bottom: 1px solid black;
+	float: left;
+	min-width: 400px;
+	max-width: 800px;
+}
+
+.navbar, .contentcontainer {
+	width: 100%;
+	margin: 0 auto;
+	overflow: auto;
+}
+
+.contentcontainer {
+	clear: both;
+	min-width: 400px;
+	max-width: 1200px;
+}
+
+.navbar {
+
 }
 
 .navlink {
 	float: left;
-	color: black;
-	padding: 5px 10px;
+	color: white;
+	padding: 20px 30px;
 }
 
-.navlink:hover {
-	color: blue;
+.navlink, #title {
+	transition: color 0.5s;
+	-moz-transition: color 0.5s;
+	-webkit-transition: color 0.5s;
+}
+
+.navlink:hover, #title:hover {
+	color: #adadad;
 }
 
 .contentcontainer {
 	
+}
+
+#about, #pagetitle {
+	float: left;
+}
+
+#about {
+	padding: 0px 10px;
+	clear: left;
+	width: 30%;
+}
+
+#cover {
+	float: right;
+	width: 65%;
+}
+
+#pagetitle {
+	font-family: 'STIXGeneralBold';
+	font-weight: bold;
+	font-size: 25px;
+	margin: 0px 0px 15px 0px;
+}
+
+#content {
+	clear: left;
 }
 
 iframe {
@@ -177,7 +202,7 @@ iframe {
 }
 
 a:visited {
-	color: black;
+	color: white;
 }
 
 footer {
@@ -190,73 +215,10 @@ footer p {
 	font-size: 12px;
 }
 
-@media only screen and (max-width: 800px) {
-	#banner {
+@media (max-device-width: 800px) {
+	#title {
+		float: none;
 		width: 100%;
-		height: 120px;
+		text-align: center;
 	}
-	
-	#bannertext {
-		display: none;
-	}
-	
-	#bannerimg {
-		top: 0px;
-		left: calc(50% - 125px);
-		width: 250px;
-		opacity: 1;
-		transition: opacity 2s;
-		-moz-transition: opacity 2s;
-		-webkit-transition: opacity 2s;
-		height: auto;
-	}
-	
-	.mobilenavbar {
-		display: none;
-		overflow: auto;
-	}
-	
-	.mobilenavbar a {
-		
-		width: 100%;
-		overflow: auto;
-	}
-	
-	.navlink {
-		transition: all 0.5s ease;
-		width: calc(100% - 20px);
-	}
-	
-	#navbutton {
-		display: block;
-		padding: 5px 10px;
-	}
-	
-	#navbutton:hover + .mobilenavbar, #navbutton:focus + .mobilenavbar {
-		display: block;
-	}
-	
-	.mobilenavbar:hover {
-		display: block;
-	}
-	
-	.navbar {
-		display: none;
-	}
-	
-	
-	.videowrapper {
-		width: 100%;
-	}
-	
-	.videowrapper iframe {
-		width: 100%;
-	}
-	
-	.contentcontainer, .navbar {
-		width: 100%;
-		margin: 0px;
-		min-width: 100px;
-	}
-
 }
