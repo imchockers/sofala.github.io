@@ -21,6 +21,22 @@ nav {
 	z-index: 9999;
 }
 
+a {
+	color: white;
+	text-decoration: none;
+	transition: color 0.25s;
+	-moz-transition: color 0.25s;
+	-webkit-transition: color 0.25s;
+}
+
+a:visited {
+	color: white;
+}
+
+a:hover {
+	color: #ECECEC;
+}
+
 #title {
 	font-size: 1.6em;
 }
@@ -33,8 +49,6 @@ nav {
 }
 
 #navlinks a {
-	color: white;
-	text-decoration: none;
 	padding: 20px 10px;
 }
 
@@ -47,6 +61,17 @@ section {
 	background-position: left top;
 	background-attachment: fixed;
 	background-size: 100% 100%;
+}
+
+.imagewrapper {
+	
+}
+
+.imagewrapper img {
+	float: left;
+	width: 60%;
+	height: auto;
+	padding-right: 20px;
 }
 
 .videowrapper {
@@ -65,11 +90,28 @@ section {
 }
 
 .contentcontainer, nav {
-	max-width: 800px;
-	min-width: 600px;
+	max-width: 1000px;
+	min-width: 800px;
 }
 
 .contentcontainer {
 	padding-top: 60px;
 	margin: 0 auto;
+}
+
+#aboutsection .pagetitle {
+	margin-top: 0;
+	float: right;
+	width: 35%;
+}
+
+#aboutsection .content {
+	float: right;
+	width: 35%;
+}
+
+.content {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: lighter;
+	font-size: 0.7em;
 }
