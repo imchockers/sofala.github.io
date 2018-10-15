@@ -1,19 +1,29 @@
-var colors = ["#cbb7d9", "#fbb364", "#8dcfe5"];
-var index = 0;
-var hoveredElement;
+var lastST = 0;
 
-function setFocused(object) {
-	hoveredElement = object;
-}
-
-function resetLink(object) {
-	object.style.color = "black";
-}
-
-function changeColor() {
-	if (index >= colors.length)
-		index = 0;
+function scrollScript() {
+	var navlinks = document.getElementById('navlinks');
+	var st = window.pageYOffset || document.documentElement.scrollTop;
 	
-	hoveredElement.style.color = colors[index];
-	index++;
+	if (st > lastST) {
+		navHide(navlinks);
+	}
+	else {
+		navShow(navlinks);
+	}
+	
+	lastST = st;
+	
+}
+
+function navHide(navlinks) {
+	navlinks.style.top = -70+'px';
+}
+
+function navShow(navlinks) {
+	navlinks.style.top = 0+'px';
+}
+
+function navMouse() {
+	navShow(document.getElementById('navlinks'));
+	
 }
