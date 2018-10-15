@@ -4,6 +4,10 @@ function scrollScript() {
 	var navlinks = document.getElementById('navlinks');
 	var st = window.pageYOffset || document.documentElement.scrollTop;
 	
+	if (menuopen) {
+		openMenu();
+	}
+	
 	if((window.innerWidth
 		|| document.documentElement.clientWidth
 		|| document.body.clientWidth) > 768) {
