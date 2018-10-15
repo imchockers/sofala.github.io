@@ -1,31 +1,38 @@
 var lastST = 0;
 
 function scrollScript() {
+	var navlinks = document.getElementById('navlinks');
+	var st = window.pageYOffset || document.documentElement.scrollTop;
+	
 	if((window.innerWidth
 		|| document.documentElement.clientWidth
 		|| document.body.clientWidth) > 768) {
-	
-		var navlinks = document.getElementById('navlinks');
-		var st = window.pageYOffset || document.documentElement.scrollTop;
 		
 		if (st > lastST) {
-			navHide(navlinks);
+			navHide(navlinks, -70);
 		}
 		else {
-			navShow(navlinks);
+			navShow(navlinks, 0);
 		}
 		
 		lastST = st;
+	} else {
+		if (st > lastST) {
+			navHide(navlinks, -75);
+		}
+		else {
+			navShow(navlinks, 15);
+		}
 	}
 	
 }
 
-function navHide(navlinks) {
-	navlinks.style.top = -70+'px';
+function navHide(navlinks, offset) {
+	navlinks.style.top = offset+'px';
 }
 
-function navShow(navlinks) {
-	navlinks.style.top = 0+'px';
+function navShow(navlinks, offset) {
+	navlinks.style.top = offset+'px';
 }
 
 function navMouse() {

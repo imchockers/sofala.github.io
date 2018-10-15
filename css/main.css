@@ -136,8 +136,7 @@ footer {
 
 @media only screen and (max-width: 768px) {
 	nav {
-		padding: 5px 0px 0px 5px;
-		background-color: #BCBCBC;
+		padding: 15px 0px 0px 5px;
 		width: 100%;
 		min-width: 342px;
 	}
@@ -154,8 +153,16 @@ footer {
 		font-size: 1.6em;
 	}
 	
+	#backgroundsection {
+		width: 100%;
+		height: 100vh;
+	}
+	
 	section {
-		min-height: 75vh;
+		min-height: 75vh;;
+	}
+	
+	#listensection {
 		overflow: auto;
 	}
 	
