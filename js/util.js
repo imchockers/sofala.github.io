@@ -15,7 +15,6 @@ function scrollScript() {
 			navShow(navlinks, 0);
 		}
 		
-		lastST = st;
 	} else {
 		if (st > lastST) {
 			navHide(navlinks, -75);
@@ -24,6 +23,8 @@ function scrollScript() {
 			navShow(navlinks, 15);
 		}
 	}
+	
+	lastST = st;
 	
 }
 
