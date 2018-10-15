@@ -19,11 +19,27 @@ nav {
 	position: sticky;
 	top: 0;
 	height: 50px;
+	width: 100%;
 	z-index: 9999;
+	min-width: 800px;
 }
 
 nav a {
 	text-decoration: none;
+}
+
+#rightnav {
+	padding-top: 14px;
+	font-size: 0.8em;
+	float: right;
+}
+
+#touchnav {
+	display: none;
+}
+
+#menuicon {
+	display: none;
 }
 
 a {
@@ -46,6 +62,7 @@ a:hover {
 }
 
 #navlinks {
+	width: 100%;
 	position: absolute;
 	transition: top 0.25s;
 	-moz-transition: top 0.25s;
@@ -93,7 +110,7 @@ section {
 	height: 100%;
 }
 
-.contentcontainer, nav {
+.contentcontainer {
 	max-width: 1000px;
 	min-width: 800px;
 }
@@ -105,8 +122,8 @@ section {
 
 #aboutsection .pagetitle {
 	margin-top: 0;
-	float: right;
-	width: 35%;
+	float: left;
+	width: 100%;
 }
 
 #aboutsection .content {
@@ -141,7 +158,45 @@ footer {
 		min-width: 342px;
 	}
 	
+	#rightnav {
+		padding: 0;
+	}
+	
+	#rightnav a {
+		display: none;
+		float: left;
+		clear: both;
+	}
+	
+	#touchnav {
+		z-index: 10;
+		position: absolute;
+		float: right;
+		background-color: rgba(0,0,0,0.5);
+		width: 40%;
+		top: 50px;
+		right: 0;
+		height: 100vh;
+	}
+	
+	#touchnav a {
+		padding-left: 40px;
+		float: left;
+		clear: both;
+	}
+	
+	#menuicon {
+		float: right;
+		z-index: 9999;
+		padding-top: 0;
+		padding-right: 10px;
+		height: 40px;
+		width: 40px;
+		display: inline;
+	}
+	
 	#navlinks {
+		top: 15px;
 		font-size: 0.75em;
 	}
 	
@@ -177,10 +232,10 @@ footer {
 	}
 	
 	#aboutsection .pagetitle {
-		float: left;
+		width: calc(100% - 20px);
 	}
 	
-	#aboutsection .content, #aboutsection .page-title {
+	#aboutsection .content {
 		clear: both;
 		float: left;
 		width: calc(100% - 20px);

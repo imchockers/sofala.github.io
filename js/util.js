@@ -40,3 +40,18 @@ function navMouse() {
 	navShow(document.getElementById('navlinks'));
 	
 }
+
+var menuopen = false;
+
+function openMenu() {
+	var touchnav = document.getElementById("touchnav");
+	
+	if (menuopen) {
+		touchnav.style.display = 'none';
+		menuopen = false;
+	}
+	else {
+		touchnav.style.display = 'block';
+		menuopen = true;
+	}
+}
