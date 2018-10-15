@@ -155,7 +155,8 @@ footer {
 	}
 	
 	section {
-		height: 75vh;
+		min-height: 75vh;
+		overflow: auto;
 	}
 	
 	.contentcontainer {
@@ -180,6 +181,7 @@ footer {
 	}
 	
 	.content iframe {
+		padding: 0;
 		padding-bottom: 10px;
 		width: 100%;
 		height: 500px;
