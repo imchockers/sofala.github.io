@@ -1,17 +1,22 @@
 var lastST = 0;
 
 function scrollScript() {
-	var navlinks = document.getElementById('navlinks');
-	var st = window.pageYOffset || document.documentElement.scrollTop;
+	if((window.innerWidth
+		|| document.documentElement.clientWidth
+		|| document.body.clientWidth) > 768) {
 	
-	if (st > lastST) {
-		navHide(navlinks);
+		var navlinks = document.getElementById('navlinks');
+		var st = window.pageYOffset || document.documentElement.scrollTop;
+		
+		if (st > lastST) {
+			navHide(navlinks);
+		}
+		else {
+			navShow(navlinks);
+		}
+		
+		lastST = st;
 	}
-	else {
-		navShow(navlinks);
-	}
-	
-	lastST = st;
 	
 }
 

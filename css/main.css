@@ -11,6 +11,7 @@ html {
 
 body {
 	margin: 0;
+	width: 100%
 }
 
 nav {
@@ -21,9 +22,12 @@ nav {
 	z-index: 9999;
 }
 
+nav a {
+	text-decoration: none;
+}
+
 a {
 	color: white;
-	text-decoration: none;
 	transition: color 0.25s;
 	-moz-transition: color 0.25s;
 	-webkit-transition: color 0.25s;
@@ -110,8 +114,79 @@ section {
 	width: 35%;
 }
 
-.content {
+.content, footer {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: lighter;
 	font-size: 0.7em;
+}
+
+.content iframe {
+	padding: 10px;
+	width: 500px;
+	height: 500px;
+	margin: 0 auto;
+}
+
+footer {
+	width: 250px;
+	margin: 0 auto;
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+	nav {
+		padding: 5px 0px 0px 5px;
+		background-color: #BCBCBC;
+		width: 100%;
+		min-width: 342px;
+	}
+	
+	#navlinks {
+		font-size: 0.75em;
+	}
+	
+	#navlinks a {
+		padding-bottom: 10px;
+	}
+	
+	#title {
+		font-size: 1.6em;
+	}
+	
+	section {
+		height: 75vh;
+	}
+	
+	.contentcontainer {
+		width: 100%;
+		min-width: 0px;
+	}
+	
+	.imagewrapper img {
+		width: 100%;
+		padding: 0;
+	}
+	
+	#aboutsection .pagetitle {
+		float: left;
+		width: 100%;
+	}
+	
+	#aboutsection .content, #aboutsection .page-title {
+		clear: both;
+		float: left;
+		width: 100%;
+	}
+	
+	.content iframe {
+		padding-bottom: 10px;
+		width: 100%;
+		height: 500px;
+		margin: 0 auto;
+	}
+	
+	.content, .pagetitle {
+		padding: 10px;
+	}
 }
