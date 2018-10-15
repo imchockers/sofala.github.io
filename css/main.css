@@ -136,7 +136,7 @@ footer {
 
 @media only screen and (max-width: 768px) {
 	nav {
-		padding: 15px 0px 0px 5px;
+		padding: 0px;
 		width: 100%;
 		min-width: 342px;
 	}
@@ -178,13 +178,12 @@ footer {
 	
 	#aboutsection .pagetitle {
 		float: left;
-		width: 100%;
 	}
 	
 	#aboutsection .content, #aboutsection .page-title {
 		clear: both;
 		float: left;
-		width: 100%;
+		width: calc(100% - 20px);
 	}
 	
 	.content iframe {
