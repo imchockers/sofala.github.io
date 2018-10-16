@@ -2,7 +2,9 @@ html {
     color: white;
     font-size: 1.2em;
     line-height: 1.4;
-	background-color: #C3C3C3;
+	/*background-color: #C3C3C3;*/
+	/*background-color: #8D739E; */
+	background-color: white;
 	font-family: 'STIXGeneralBold';
 	font-weight: bold;
 	height: 100%;
@@ -21,7 +23,7 @@ nav {
 	height: 50px;
 	width: 100%;
 	z-index: 9999;
-	min-width: 800px;
+	min-width: 855px;
 }
 
 nav a {
@@ -77,11 +79,16 @@ section {
 	height: 100vh;
 }
 
-#backgroundsection {
+#backgroundsection, #aboutsection {
 	background-image: url("../img/bg.png");
-	background-position: left top;
+	background-position: right 30%;
 	background-attachment: fixed;
-	background-size: 100% 100%;
+	background-size: 2000px auto;
+}
+
+#connectsection {
+	color: black;
+	height: 40vh;
 }
 
 .imagewrapper {
@@ -108,6 +115,7 @@ section {
 	left: 0;
 	width: 100%;
 	height: 100%;
+	max-height: 100vh;
 }
 
 .contentcontainer {
@@ -118,6 +126,13 @@ section {
 .contentcontainer {
 	padding-top: 60px;
 	margin: 0 auto;
+}
+
+#videosection .contentcontainer {
+	padding-top: 0;
+	margin: 0;
+	max-width: none;
+	width: 100%;
 }
 
 #aboutsection .pagetitle {
@@ -133,7 +148,7 @@ section {
 
 .content, footer {
 	font-family: 'Montserrat', sans-serif;
-	font-weight: lighter;
+	font-weight: 100;
 	font-size: 0.7em;
 }
 
@@ -158,6 +173,10 @@ footer {
 		min-width: 342px;
 	}
 	
+	.hidenav {
+		display: none;
+	}
+	
 	#rightnav {
 		padding: 0;
 	}
@@ -172,7 +191,7 @@ footer {
 		z-index: 10;
 		position: absolute;
 		float: right;
-		background-color: rgba(0,0,0,0.5);
+		/*background-color: rgba(0,0,0,0.5);*/
 		width: 40%;
 		top: 50px;
 		right: 0;
@@ -180,9 +199,11 @@ footer {
 	}
 	
 	#touchnav a {
-		padding-left: 40px;
-		float: left;
+		padding-right: 40px;
+		padding-top: 15px; 
+		float: right;
 		clear: both;
+		
 	}
 	
 	#menuicon {

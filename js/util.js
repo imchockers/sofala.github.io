@@ -41,7 +41,7 @@ function navShow(navlinks, offset) {
 }
 
 function navMouse() {
-	navShow(document.getElementById('navlinks'));
+	navShow(document.getElementById('navlinks'), 0);
 	
 }
 
