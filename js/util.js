@@ -1,7 +1,10 @@
 var lastST = 0;
+var autoplay = true;
 
 function scrollScript() {
-	var navlinks = document.getElementById('navlinks');
+	document.getElementById("scrollhint").style.display = "none";
+	
+	var navlinks = document.getElementById('hidenav');
 	var st = window.pageYOffset || document.documentElement.scrollTop;
 	
 	if (menuopen) {
@@ -28,6 +31,11 @@ function scrollScript() {
 		}
 	}
 	
+	var width = window.innerWidth || document.documentElement.clientWidth;
+	
+	if (autoplay && width > 872)
+		checkAutoplay(st);
+	
 	lastST = st;
 	
 }
@@ -41,7 +49,7 @@ function navShow(navlinks, offset) {
 }
 
 function navMouse() {
-	navShow(document.getElementById('navlinks'), 0);
+	navShow(document.getElementById('hidenav'), 0);
 	
 }
 
@@ -51,11 +59,27 @@ function openMenu() {
 	var touchnav = document.getElementById("touchnav");
 	
 	if (menuopen) {
-		touchnav.style.display = 'none';
+		touchnav.style.width = '0px';
 		menuopen = false;
 	}
 	else {
-		touchnav.style.display = 'block';
+		touchnav.style.width = '150px';
 		menuopen = true;
 	}
+}
+
+function checkAutoplay(st) {
+	var height = window.innerHeight || document.documentElement.clientHeight;
+	
+	var vid = document.getElementById("pagevid");
+	var vidHeight = $('#videosection').height();
+	var vidRect = vid.getBoundingClientRect();
+	var target = vidHeight / 2 + vidRect.top + st;
+	
+	if ((st + height) > target) {
+		vid.autoplay = true;
+		vid.src += "?autoplay=1";
+		autoplay = false;
+	}
+	
 }

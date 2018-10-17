@@ -17,6 +17,7 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link rel="stylesheet" media="screen" href="https://everythingfonts.com/font/face/_hn55Gf_L2OiJYmjrzd2MgeF" type="text/css"/>
   
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/util.js"></script>
 </head>
 
@@ -27,9 +28,11 @@
 	<nav onmouseenter="navMouse()">
 		<div id="navlinks">
 			<a href="#backgroundsection" id="title">sofala</a>
-			<a class="hidenav" href="#videosection">watch</a>
-			<a class="hidenav" href="#aboutsection">about</a>
-			<a class="hidenav" href="#connectsection">connect</a>
+			<div id="hidenav">
+				<a href="#videosection">watch</a>
+				<a href="#aboutsection">about</a>
+				<a href="#connectsection">connect</a>
+			</div>
 			<div id="touchnav">
 				<a href="#videosection">watch</a>
 				<a href="#aboutsection">about</a>
@@ -54,7 +57,11 @@
 	</nav>
 	
 	<!-- Background page -->
-	<section id="backgroundsection"></section>
+	<section id="backgroundsection">
+		<div id="scrollhint">
+			<img src="img/downarrow.png"/>
+		</div>
+	</section>
 	
 	<!-- Video page -->
 	<section id="videosection">
