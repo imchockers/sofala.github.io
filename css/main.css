@@ -77,6 +77,16 @@ a:hover {
 	-webkit-transition: top 0.25s;
 }
 
+#icons {
+	width: 200px;
+	margin: 0 auto;
+}
+
+#icons a img {
+	width: 50px;
+	height: 50px;
+}
+
 #navlinks a {
 	padding: 20px 10px;
 }
@@ -294,5 +304,20 @@ footer {
 	
 	.content, .pagetitle {
 		padding: 10px;
+	}
+	
+	#touchnavicons {
+		float: right;
+		width: 130px;
+	}
+
+	#touchnavicons a {
+		float: none;
+		padding: 0;
+	}
+
+	#touchnavicons a img {
+		width: 32px;
+		height: 32px;
 	}
 }

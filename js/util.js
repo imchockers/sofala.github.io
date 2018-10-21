@@ -2,7 +2,7 @@ var lastST = 0;
 var autoplay = true;
 
 function scrollScript() {
-	document.getElementById("scrollhint").style.display = "none";
+	stopScrollHint();
 	
 	var navlinks = document.getElementById('hidenav');
 	var st = window.pageYOffset || document.documentElement.scrollTop;
@@ -81,5 +81,10 @@ function checkAutoplay(st) {
 		vid.src += "?autoplay=1";
 		autoplay = false;
 	}
+	
+}
+
+function stopScrollHint() {
+	document.getElementById("scrollhint").style.animationIterationCount = "1";
 	
 }
