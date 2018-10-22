@@ -63,7 +63,7 @@ function openMenu() {
 		menuopen = false;
 	}
 	else {
-		touchnav.style.width = '150px';
+		touchnav.style.width = '200px';
 		menuopen = true;
 	}
 }

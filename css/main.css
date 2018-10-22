@@ -42,6 +42,10 @@ nav a {
 	display: none;
 }
 
+#icons a {
+	text-decoration: none;
+}
+
 #menuicon {
 	display: none;
 }
@@ -78,11 +82,11 @@ a:hover {
 }
 
 #icons {
-	width: 200px;
+	width: 158px;
 	margin: 0 auto;
 }
 
-#icons a img {
+#icons a, #icons a img {
 	width: 50px;
 	height: 50px;
 }
@@ -199,7 +203,7 @@ footer {
 	nav {
 		padding: 0px;
 		width: 100%;
-		min-width: 342px;
+		min-width: 320px;
 	}
 	
 	#hidenav {
@@ -309,15 +313,17 @@ footer {
 	#touchnavicons {
 		float: right;
 		width: 130px;
+		padding-right: 30px;
 	}
 
 	#touchnavicons a {
 		float: none;
 		padding: 0;
+		padding-right: 3px;
 	}
 
 	#touchnavicons a img {
-		width: 32px;
-		height: 32px;
+		width: 38px;
+		height: 38px;
 	}
 }
