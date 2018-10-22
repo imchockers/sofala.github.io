@@ -326,4 +326,8 @@ footer {
 		width: 38px;
 		height: 38px;
 	}
+	
+	p {
+		text-align: justify;
+	}
 }
