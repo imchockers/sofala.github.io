@@ -27,7 +27,7 @@ function scrollScript() {
 			navHide(navlinks, -75);
 		}
 		else {
-			navShow(navlinks, 15);
+			navShow(navlinks, 0);
 		}
 	}
 	
